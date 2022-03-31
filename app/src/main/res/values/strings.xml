@@ -1,0 +1,12 @@
+<resources>
+    <string name="namaAplikasi">Luas Persegi Panjang</string>
+    <string name="intro">Hitung Luas Persegi Panjang, silahkan coba~~~</string>
+    <string name="panjangPersegi">Panjang (cm)</string>
+    <string name="lebarPersegi">Lebar (cm)</string>
+    <string name="hitung">Hitung</string>
+    <string name="hasil_x">Hasil: %1$.0f</string>
+    <string name="panjangKosong">Kamu belum memasukkan panjang.</string>
+    <string name="lebarKosong">Kamu belum memasukkan lebar.</string>
+    <string name="ulang">Reset</string>
+
+</resources>
