@@ -5,8 +5,8 @@
     <string name="lebarPersegi">Lebar (cm)</string>
     <string name="hitung">Hitung</string>
     <string name="hasil_x">Hasil: %1$.0f</string>
-    <string name="panjangKosong">Kamu belum memasukkan panjang.</string>
-    <string name="lebarKosong">Kamu belum memasukkan lebar.</string>
+    <string name="panjangKosong">Kamu belum memasukkan panjang (cm).</string>
+    <string name="lebarKosong">Kamu belum memasukkan lebar (cm).</string>
     <string name="ulang">Reset</string>
 
 </resources>
