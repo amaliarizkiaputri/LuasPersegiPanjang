@@ -1,12 +1,48 @@
 <resources>
-    <string name="namaAplikasi">Luas Persegi Panjang</string>
-    <string name="intro">Hitung Luas Persegi Panjang, silahkan coba~~~</string>
-    <string name="panjangPersegi">Panjang (cm)</string>
-    <string name="lebarPersegi">Lebar (cm)</string>
-    <string name="hitung">Hitung</string>
-    <string name="hasil_x">Hasil: %1$.0f</string>
-    <string name="panjangKosong">Kamu belum memasukkan panjang (cm).</string>
-    <string name="lebarKosong">Kamu belum memasukkan lebar (cm).</string>
+    <string name="app_name">Luas Persegi Panjang</string>
+    <string name="intro">Persegi Panjang merupakan salah satu bangun datar yang memiliki sisi panjang dan lebar
+        dengan rumus panjang * lebar. Untuk Menghitungnya silahkan coba~~~</string>
+    <string name="panjang">Panjang (cm)</string>
+    <string name="lebar">Lebar (cm)</string>
+    <string name="hitung">Hitung Luas</string>
+    <string name="konfirmasiHapus">Hapus Seluruh Histori???</string>
+    <string name="panjang_invalid">Kamu belum memasukkan panjang (cm).</string>
+    <string name="lebar_invalid">Kamu belum memasukkan lebar (cm).</string>
     <string name="ulang">Reset</string>
+    <string name="hapusHistori">Hapus Histori</string>
+    <string name="hasil_x">Luas: %1$.2f cm2 </string>
+    <string name="data_x">Panjang: %1$.1f cm - Lebar: %2$.1f cm </string>
+    <string name="batal">Batal</string>
+    <string name="histori">Histori</string>
+    <string name="bagikan">Hitung Persegi Panjang\nPanjang: %1$s cm kg\nLebar: %2$s cm\n\n%3$s \n%4$s</string>
+    <string name="data_kosong">Data kosong</string>
+
+    <string name="rumus">Persegi Panjang merupakan bangun datar yang 4 buah sisi dengan
+        2 pasang sisi berbeda. Adapun
+        Rumus Luas Persegi Panjang = panjang * lebar</string>
+
+    <string name="hitung_luas">Hitung Luas</string>
+    <string name="reset">Reset Halaman</string>
+    <string name="hasil_luas">Luas Persegi Panjang: %1$.2f</string>
+
+    <string name="kategori">Kategori: %1$s</string>
+    <string name="kecil">Persegi Panjang Kecil</string>
+    <string name="sedang">Persegi Panjang Sedang</string>
+    <string name="besar">Persegi Panjang Besar</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="copyright">Hitung Luas Persegi Panjang merupakan sebuah aplikasi sederhana
+        untuk menghitung luas dari persegi panjang\n\Copyright © 2022
+        Amalia Rizkia Putri.\nAll rights reserved.</string>
+    <string name="tulisan_panjang">Panjang : %1$.2f cm</string>
+    <string name="tulisan_lebar">Lebar : %1$.2f cm</string>
+    <string name="tulisan_luas">Luas : %1$s cm^2</string>
+    <string name="data_invalid">Tidak Ada Data</string>
+    <string name="dialog_hapus">Hapus semua data?</string>
+    <string name="hapus">Hapus</string>
+
+    <string name="gambar_persegipanjang">Persegi Panjang Kecil</string>
+    <string name="desc_ppkecil">Kategori Persegi Panjang Kecil</string>
+    <string name="desc_ppsedang">Kategori Persegi Panjang Sedang</string>
+    <string name="desc_ppbesar">Kategori Persegi Panjang Besar</string>
 
 </resources>
