@@ -11,6 +11,6 @@
     <item
         android:id="@+id/histori_menu"
         android:title="histori"
-        android:icon="@drawable/ic_baseline_delete_24"
+        android:icon="@drawable/ic_baseline_history_24"
         app:showAsAction="ifRoom"/>
 </menu>

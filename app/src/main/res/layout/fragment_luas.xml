@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lebar_hint"
+            android:id="@+id/persegipanjang_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -32,39 +32,17 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintTop_toBottomOf="@+id/rumus">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/panjang_inp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/panjang"
-                android:inputType="number" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tinggiSegitiga_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/lebar_hint">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/lebar_inp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/lebar"
-                android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
             android:text="@string/hitung_luas"
-            tools:layout_editor_absoluteX="138dp"
-            tools:layout_editor_absoluteY="235dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@+id/lebar_inp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="138dp" />
 
         <Button
             android:id="@+id/resetButton"
@@ -134,6 +112,28 @@
             app:layout_constraintTop_toBottomOf="@+id/lihatGambar"
             android:visibility="invisible"
             tools:visibility="visible"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lebar_inp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/lebar"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@+id/panjang_inp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/panjang_inp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="@string/panjang"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@+id/rumus"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

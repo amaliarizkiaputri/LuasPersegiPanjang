@@ -9,6 +9,7 @@ import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import org.d3if4127.luaspersegipanjang.R
 import org.d3if4127.luaspersegipanjang.databinding.FragmentLuasBinding
@@ -56,7 +57,7 @@ class HitungLuas: Fragment() {
         binding.button.setOnClickListener { hitungLuas() }
         binding.resetButton.setOnClickListener { resetHitungan() }
         binding.linkButton.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.celebrities.id/read/rumus-luas-persegipanjang-FM8P73"))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://katadata.co.id/intan/berita/61780774934fa/rumus-luas-persegi-panjang-beserta-contoh-soalnya"))
             requireContext().startActivities(arrayOf(intent))
         }
         binding.lihatGambar.setOnClickListener { viewModel.mulaiNavigasi() }
@@ -71,6 +72,7 @@ class HitungLuas: Fragment() {
             viewModel.selesaiNavigasi()
         }
     }
+
 
     @SuppressLint("StringFormatMatches")
     private fun showResult(result: HasilPersegiPanjang?) {
@@ -127,4 +129,8 @@ class HitungLuas: Fragment() {
         })
         viewModel.getHasilLuas().observe(requireActivity(), { showResult(it) })
     }
+}
+
+private fun NavController.navigate(actionHitungFragmentToPersegiPanjangFragment: Unit) {
+
 }
