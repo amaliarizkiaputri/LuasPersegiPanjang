@@ -1,15 +1,15 @@
 package org.d3if4127.luaspersegipanjang.ui.hitung
 
-import  android.annotation.SuppressLint
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import org.d3if4127.luaspersegipanjang.R
 import org.d3if4127.luaspersegipanjang.databinding.FragmentLuasBinding
@@ -28,7 +28,7 @@ class HitungLuas: Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLuasBinding.inflate(inflater, container, false)
         setHasOptionsMenu(true)
         return  binding.root
@@ -66,11 +66,11 @@ class HitungLuas: Fragment() {
 
         viewModel.getHasilLuas().observe(requireActivity(), { showResult(it) })
 
-        viewModel.getNavigasi().observe(viewLifecycleOwner) {
+        viewModel.getNavigasi().observe(viewLifecycleOwner, {
             if (it == null) return@observe
             findNavController().navigate(HitungLuasDirections.actionHitungLuasToAboutFragment())
             viewModel.selesaiNavigasi()
-        }
+        })
     }
 
 
@@ -122,15 +122,18 @@ class HitungLuas: Fragment() {
     }
 
     private fun setupObserveres() {
-        viewModel.getNavigasi().observe(viewLifecycleOwner, {
-            if(it == null) return@observe
-            findNavController().navigate(HitungLuasDirections.actionHitungFragmentToPersegiPanjangFragment(it))
+        viewModel.getNavigasi().observe(viewLifecycleOwner) {
+            if (it == null) return@observe
+            findNavController().navigate(HitungLuasDirections.actionHitungLuasToPersegiPanjangFragment(it))
             viewModel.selesaiNavigasi()
-        })
+        }
         viewModel.getHasilLuas().observe(requireActivity(), { showResult(it) })
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.d("Notifikasi", "Method onDestroy dijalankan!")
+        viewModel.scheduleUpdater(requireActivity().application)
     }
 }
 
-private fun NavController.navigate(actionHitungFragmentToPersegiPanjangFragment: Unit) {
-
-}

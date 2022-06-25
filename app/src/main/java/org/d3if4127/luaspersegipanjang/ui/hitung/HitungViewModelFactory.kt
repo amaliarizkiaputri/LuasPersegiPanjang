@@ -13,6 +13,6 @@ class HitungViewModelFactory(
         if (modelClass.isAssignableFrom(HitungViewModel::class.java)) {
             return HitungViewModel(db) as T
         }
-        throw IllegalArgumentException("Unknown ViewModel class")
+        throw IllegalArgumentException("Unknown ViewModel Class")
     }
 }

@@ -1,4 +1,6 @@
-import android.util.Log
+package org.d3if4127.luaspersegipanjang.ui.histori
+
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil

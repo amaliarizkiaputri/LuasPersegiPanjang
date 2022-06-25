@@ -1,9 +1,7 @@
-import android.app.AlertDialog
-import android.content.DialogInterface
+package org.d3if4127.luaspersegipanjang.ui.histori
+
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -12,8 +10,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.d3if4127.luaspersegipanjang.R
 import org.d3if4127.luaspersegipanjang.databinding.FragmentHistoriBinding
 import org.d3if4127.luaspersegipanjang.db.PersegiPanjangDb
-import org.d3if4127.luaspersegipanjang.ui.histori.HistoriViewModel
-import org.d3if4127.luaspersegipanjang.ui.histori.HistoriViewModelFactory
 
 
 class HistoriFragment : Fragment(){

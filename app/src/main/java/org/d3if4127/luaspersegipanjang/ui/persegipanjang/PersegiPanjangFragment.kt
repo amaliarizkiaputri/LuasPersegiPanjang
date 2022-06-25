@@ -1,5 +1,6 @@
-package org.d3if4127.luaspersegipanjang.ui
+package org.d3if4127.luaspersegipanjang.ui.persegipanjang
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,44 +8,53 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import org.d3if4127.luaspersegipanjang.R
 import org.d3if4127.luaspersegipanjang.databinding.FragmentLihatGambarBinding
 import org.d3if4127.luaspersegipanjang.model.KategoriPersegiPanjang
+import org.d3if4127.luaspersegipanjang.util.Gambar
 
 class PersegiPanjangFragment: Fragment() {
 
     private lateinit var binding: FragmentLihatGambarBinding
     private val args: PersegiPanjangFragmentArgs by navArgs()
 
-    override fun onCreateView (inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentLihatGambarBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
-    private fun updateUI (kategori: KategoriPersegiPanjang) {
-        val actionBar = (requireActivity() as AppCompatActivity).supportActionBar
+    private fun updateUI(kategori: KategoriPersegiPanjang) {
         when (kategori) {
             KategoriPersegiPanjang.KECIL -> {
-                binding.imageView.setImageResource(R.drawable.ppkecil)
+                Glide.with(requireActivity())
+                    .load(Uri.parse(Gambar.persegipanjangkecil))
+                    .into(binding.imageView)
                 binding.textView.text = getString(R.string.desc_ppkecil)
             }
             KategoriPersegiPanjang.SEDANG -> {
-                binding.imageView.setImageResource(R.drawable.ppsedang)
+                Glide.with(requireActivity())
+                    .load(Uri.parse(Gambar.persegipanjangsedang))
+                    .into(binding.imageView)
                 binding.textView.text = getString(R.string.desc_ppsedang)
             }
             KategoriPersegiPanjang.BESAR -> {
-                binding.imageView.setImageResource(R.drawable.ppbesar)
+                Glide.with(requireActivity())
+                    .load(Uri.parse(Gambar.persegipanjangbesar))
+                    .into(binding.imageView)
                 binding.textView.text = getString(R.string.desc_ppbesar)
             }
         }
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         updateUI(args.kategori)
     }
 }
 
-interface PersegiPanjangFragmentArgs {
 
-    abstract val kategori: KategoriPersegiPanjang
-}
